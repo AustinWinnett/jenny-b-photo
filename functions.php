@@ -26,3 +26,12 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+function dd_include_module( $module, $vars, $class_id = array() ) {
+
+  $data = $vars;
+  $module_id = $class_id['id'];
+  $module_classes = $class_id['classes'];
+
+  include(locate_template('templates/modules/' . $module . '.php'));
+}

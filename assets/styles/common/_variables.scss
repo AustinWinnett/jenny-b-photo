@@ -3,4 +3,63 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary: #F5C5B5;
+$brand-secondary: #F5DED1;
+$gray: #919191;
+$dark-gray: #333333;
+$black: #000000;
+$white: #FFFFFF;
+
+
+// Media queries
+$screen-xl:  1600px;
+$screen-lg:  1200px;
+$screen-md:  992px;
+$screen-sm:  768px;
+$screen-xs:  480px;
+$screen-xxs: 400px;
+
+// Media query variables
+$screen-xl-maximum:  $screen-xl - 1;
+$screen-lg-maximum:  $screen-lg - 1;
+$screen-md-maximum:  $screen-md - 1;
+$screen-sm-maximum:  $screen-sm - 1;
+$screen-xs-maximum:  $screen-xs - 1;
+$screen-xxs-maximum: $screen-xxs - 1;
+
+$screen-sm-min: $screen-sm !default;
+$screen-md-min: $screen-md !default;
+$screen-lg-min: $screen-lg !default;
+
+// Grid
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+
+// Container widths
+$container-sm:    ($screen-sm - $grid-gutter-width);
+$container-md:    ($screen-md - $grid-gutter-width);
+$container-lg:    ($screen-lg - $grid-gutter-width);
+
+@mixin screen-lg {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen-xs {
+  @media (max-width: 575px) {
+    @content;
+  }
+}

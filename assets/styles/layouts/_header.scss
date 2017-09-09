@@ -1,0 +1,62 @@
+.navbar {
+  position: relative;
+  background-color: $white;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5em;
+    height: 1px;
+    width: 100%;
+    background-color: $white;
+  }
+
+  .logo--header {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 500;
+    margin: 0;
+    padding: 2em 0 4em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      padding: 0 0.5em;
+    }
+
+    a {
+      position: relative;
+      color: $gray;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5em;
+        left: 50%;
+        transform: translateX(-50%) translateY( .5em );
+        height: 2px;
+        width: 100%;
+        background-color: $brand-primary;
+        opacity: 0;
+        transition: 0.15s ease-in-out;
+      }
+
+      &:hover {
+        color: $brand-primary;
+
+        &::after {
+          opacity: 1;
+          transform: translateX(-50%) translateY( 0 );
+        }
+      }
+    }
+  }
+}

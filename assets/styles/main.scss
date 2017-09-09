@@ -1,10 +1,12 @@
+
+@import "common/typography";
 @import "common/variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
 
+// Global
 @import "common/global";
 
 // Components
@@ -21,3 +23,6 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+// Modules
+@import "modules/banner";
