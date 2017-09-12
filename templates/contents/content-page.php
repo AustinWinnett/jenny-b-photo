@@ -1,3 +1,4 @@
+
 <?php dd_include_module(
   'banner',
   array(
@@ -24,3 +25,5 @@
     ),
   )
 ) ?>
+
+<a href="#" class="btn">Open Link</a>

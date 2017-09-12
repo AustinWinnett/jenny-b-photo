@@ -1,5 +1,5 @@
 <header class="navbar">
-  <img src="https://unsplash.it/800/300" alt="" class="logo logo--header">
+  <img src="<?php echo get_template_directory_uri() . '/assets/images/LogoPNG.png'; ?>" alt="" class="logo logo--header">
   <div class="container">
     <nav class="primary-nav">
       <?php
