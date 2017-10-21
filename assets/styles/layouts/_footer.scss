@@ -10,9 +10,18 @@
     margin: 0 auto;
   }
 
+  nav {
+    padding: 4em 0;
+    text-align: center;
+
+    & > div {
+      display: inline-block;
+    }
+  }
+
   .navbar-nav {
     margin: 0;
-    padding: 4em 0;
+    padding: 0;
     text-align: center;
     font-size: 0.7em;
     font-weight: 500;

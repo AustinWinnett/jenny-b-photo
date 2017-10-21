@@ -49,4 +49,27 @@
   )
 ) ?>
 
+<?php dd_include_module(
+  'alt-content',
+  array(
+    'image'    => 'https:/unsplash.it/1920/1280',
+    'content'    => '<h1 class="title-heading">Photography in Kansas City</h1>
+    <h2 class="display-heading">Title Goes Here</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam neque maxime dolore, veniam voluptas quae labore iure reprehenderit, dolor. Earum, cupiditate expedita nulla amet! Ut alias, cupiditate doloremque expedita quas maiores! Quia, ratione, consectetur. Inventore veritatis voluptates libero nemo accusantium modi nostrum, sunt et corporis ipsam unde porro debitis laboriosam?</p>'
+  )
+) ?>
+
+<?php dd_include_module(
+  'alt-content',
+  array(
+    'image'    => 'https:/unsplash.it/1920/1280',
+    'content'    => '<h1 class="title-heading">Photography in Kansas City</h1>
+    <h2 class="display-heading">Title Goes Here</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam neque maxime dolore, veniam voluptas quae labore iure reprehenderit, dolor. Earum, cupiditate expedita nulla amet! Ut alias, cupiditate doloremque expedita quas maiores! Quia, ratione, consectetur. Inventore veritatis voluptates libero nemo accusantium modi nostrum, sunt et corporis ipsam unde porro debitis laboriosam?</p>',
+    'reverse'      => true
+  )
+) ?>
+
 <a href="#" class="btn">Open Link</a>

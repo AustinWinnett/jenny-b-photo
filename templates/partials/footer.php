@@ -3,10 +3,15 @@
     <div class="container">
       <img src="<?php echo get_template_directory_uri() . '/assets/images/BlushLogo.png'; ?>" alt="" class="logo logo--footer">
 
-      <nav class="primary-nav">
+      <nav class="footer-nav">
         <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-nav nav']);
+        if (has_nav_menu('left_navigation')) :
+          wp_nav_menu(['theme_location' => 'left_navigation', 'menu_class' => 'navbar-nav nav']);
+        endif;
+        ?>
+        <?php
+        if (has_nav_menu('right_navigation')) :
+          wp_nav_menu(['theme_location' => 'right_navigation', 'menu_class' => 'navbar-nav nav']);
         endif;
         ?>
       </nav>

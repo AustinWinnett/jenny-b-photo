@@ -1,12 +1,12 @@
 .jbp-banner {
   position: relative;
 
-  .jpb-banner__slides {
+  .jbp-banner__slides {
     width: 100%;
     overflow: hidden;
   }
 
-  .jpb-banner__slide {
+  .jbp-banner__slide {
     min-height: 100vh;
     background-size: cover;
     background-position: center center;
@@ -18,7 +18,7 @@
     }
   }
 
-  .jpb-banner__title {
+  .jbp-banner__title {
     position: absolute;
     bottom: 0;
     left: 0;

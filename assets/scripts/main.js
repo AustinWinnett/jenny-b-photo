@@ -27,7 +27,7 @@
 
 
         // Banner
-        $('.jpb-banner__slides').slick({
+        $('.jbp-banner__slides').slick({
           arrows: true,
           dots: false,
           autoplay: true,
