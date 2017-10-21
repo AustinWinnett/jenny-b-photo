@@ -19,6 +19,11 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        $('.navbar-toggle').click(function() {
+          $('header nav').fadeToggle();
+          $(this).toggleClass('open');
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

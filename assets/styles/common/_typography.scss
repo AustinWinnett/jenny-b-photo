@@ -34,6 +34,18 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Halfback';
+	src: url('../../assets/fonts/Halfback-Regular.eot');
+	src: url('../../assets/fonts/Halfback-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../../assets/fonts/Halfback-Regular.woff2') format('woff2'),
+		url('../../assets/fonts/Halfback-Regular.woff') format('woff'),
+		url('../../assets/fonts/Halfback-Regular.ttf') format('truetype'),
+		url('../../assets/fonts/Halfback-Regular.svg#Halfback-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 %sans-serif {
   font-family: 'Lato', sans-serif;
@@ -42,6 +54,12 @@
 }
 
 %serif {
+  font-family: 'Lora', serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+%heading-font {
   font-family: 'Lora', serif;
   font-weight: normal;
   font-style: normal;
