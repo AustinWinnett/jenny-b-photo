@@ -24,6 +24,17 @@
           $('header nav').fadeToggle();
           $(this).toggleClass('open');
         });
+
+
+        // Banner
+        $('.jpb-banner__slides').slick({
+          arrows: true,
+          dots: false,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          fade: true
+
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -33,6 +44,8 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

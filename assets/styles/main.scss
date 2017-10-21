@@ -4,7 +4,11 @@
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
+@import "../../bower_components/slick-carousel/slick/slick.scss";
 // endbower
+
+// Missed Bower Files
+@import "../../bower_components/slick-carousel/slick/slick-theme.scss";
 
 // Global
 @import "common/global";

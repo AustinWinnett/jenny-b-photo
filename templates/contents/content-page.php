@@ -2,7 +2,11 @@
 <?php dd_include_module(
   'banner',
   array(
-    'image'  => 'https://unsplash.it/1920/1280',
+    'images'  => array(
+      '0'      => 'https://unsplash.it/1920/1280',
+      '1'      => 'https://unsplash.it/1920/1281'
+    ),
+    'title'    => 'home'
   )
 ) ?>
 

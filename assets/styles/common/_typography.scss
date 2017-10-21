@@ -60,7 +60,7 @@
 }
 
 %heading-font {
-  font-family: 'Lora', serif;
+  font-family: 'Halfback', cursive;
   font-weight: normal;
   font-style: normal;
 }
@@ -70,3 +70,9 @@ $gray: #919191;
 $dark-gray: #333333;
 $black: #000000;
 $white: #FFFFFF;
+
+.display-heading {
+	@extend %heading-font;
+	margin: 0.1em 0;
+	font-size: 6em;
+}
