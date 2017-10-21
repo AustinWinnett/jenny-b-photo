@@ -71,8 +71,25 @@ $dark-gray: #333333;
 $black: #000000;
 $white: #FFFFFF;
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	margin: 0.5em 0;
+	font-weight: bold;
+	@extend %serif;
+}
+
+.title-heading {
+	@extend %sans-serif;
+	font-size: 1em;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
 .display-heading {
 	@extend %heading-font;
-	margin: 0.1em 0;
-	font-size: 6em;
+	margin: 0.25em 0;
+	font-size: 4em;
+	text-transform: lowercase;
 }

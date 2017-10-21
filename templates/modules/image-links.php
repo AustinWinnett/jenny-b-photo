@@ -4,14 +4,11 @@
       <?php if ( $data['images'] ) : ?>
         <?php foreach ( $data['images'] as $key => $image ) : ?>
           <div class="jbp-image-links__image" style="background-image: url(<?php echo $image['image']; ?>)">
-            <a href="#" class="overlay-link"></a>
-            <?php if ($image['text'] ) : ?>
-              <div class="jbp-image-links__image-text"></div>
-              <span><?php echo $image['text']; ?></span>
-            <?php endif; ?>
-          </div>
+            <a href="<?php echo $image['link']; ?>" class="overlay-link"></a>
+            <span><?php echo $image['text']; ?></span>
+          </div> <!-- /.jbp-image-links__image -->
         <?php endforeach; ?>
       <?php endif; ?>
-    </div>
-  </div>
-</div>
+    </div> <!-- /.jbp-image-links__flex -->
+  </div> <!-- /.container -->
+</div> <!-- /.jbp-image-links -->
