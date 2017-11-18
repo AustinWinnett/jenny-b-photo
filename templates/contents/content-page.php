@@ -94,3 +94,27 @@
     'button_link'    => '#'
   )
 ) ?>
+
+<?php dd_include_module(
+  'team-grid',
+  array(
+    'members'  => array(
+      '0'      => array(
+        'image'      => 'https://unsplash.it/1920/1280',
+        'content'       => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eos facilis id soluta quisquam commodi necessitatibus et. Delectus, nam alias.</p>',
+        'name'       => 'Jenny Borel'
+      ),
+      '1'      => array(
+        'image'      => 'https://unsplash.it/1920/1281',
+        'content'       => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, ratione optio quod magni at tempore cumque recusandae corrupti commodi cupiditate.</p>',
+        'name'       => 'Jenny Borel'
+      ),
+      '2'      => array(
+        'image'      => 'https://unsplash.it/1920/1282',
+        'content'       => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nobis vero voluptatem, ipsum dolores soluta repudiandae. Sequi, delectus alias accusantium!</p>',
+        'name'       => 'Andrew Staudenmaier'
+      ),
+    ),
+    'content'    => '<h4 class="title-heading">This is our team.</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit perferendis tempore veritatis explicabo ducimus dolore, vitae fugit. Officia, suscipit explicabo provident quidem voluptates, consectetur. Ipsum quis incidunt iure voluptatibus quisquam quibusdam eius, animi sit voluptates. Doloremque, ducimus, ipsum. Incidunt officiis aspernatur architecto mollitia ipsam libero iure ea neque distinctio ratione?</p>'
+  )
+) ?>
