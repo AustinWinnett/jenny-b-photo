@@ -11,7 +11,7 @@
       </nav>
 
       <div class="navbar-header">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoPNG.png" alt="" class="logo--header">
+        <a href="<?php echo site_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoPNG.png" alt="" class="logo--header"></a>
         <button type="button" class="navbar-toggle navbar-toggle--stand" data-nav="collapse" data-target="#primary-nav">
           <span class="navbar-toggle__box">
             <span class="navbar-toggle__inner"></span>

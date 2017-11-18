@@ -25,6 +25,14 @@
           $(this).toggleClass('open');
         });
 
+        // Magnific Popup
+        // For embeded images within the post content
+        $('a[rel="magnific"]').magnificPopup({
+          type: 'image',
+          removalDelay: 300,
+          mainClass: 'mfp-fade'
+        });
+
 
         // Banner
         $('.jbp-banner__slides').slick({

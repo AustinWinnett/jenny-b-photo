@@ -6,7 +6,7 @@
       '0'      => 'https://unsplash.it/1920/1280',
       '1'      => 'https://unsplash.it/1920/1281'
     ),
-    'title'    => 'home'
+    'title'    => get_the_title()
   )
 ) ?>
 
@@ -72,4 +72,25 @@
   )
 ) ?>
 
-<a href="#" class="btn">Open Link</a>
+<?php dd_include_module(
+  'masonry-grid',
+  array(
+    'title'    => '<h2 class="display-heading" style="text-align: center;">Featured Images</h2>',
+    'images'  => array(
+      '0'      => 'https://unsplash.it/1920/1280',
+      '1'      => 'https://unsplash.it/1420/1280',
+      '2'      => 'https://unsplash.it/1920/1280',
+      '3'      => 'https://unsplash.it/1920/800',
+      '4'      => 'https://unsplash.it/1920/1280',
+      '5'      => 'https://unsplash.it/1000/1280',
+      '6'      => 'https://unsplash.it/1920/1280',
+      '7'      => 'https://unsplash.it/1420/1280',
+      '8'      => 'https://unsplash.it/1920/1280',
+      '9'      => 'https://unsplash.it/1920/800',
+      '10'      => 'https://unsplash.it/1920/1280',
+      '11'      => 'https://unsplash.it/1000/1280',
+    ),
+    'button_text'    => 'View More',
+    'button_link'    => '#'
+  )
+) ?>

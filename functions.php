@@ -35,3 +35,8 @@ function dd_include_module( $module, $vars, $class_id = array() ) {
 
   include(locate_template('templates/modules/' . $module . '.php'));
 }
+
+function custom_excerpt_length( $length ) {
+    return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

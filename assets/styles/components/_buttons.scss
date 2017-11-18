@@ -1,6 +1,8 @@
-.btn{
+/* .btn{
   position: relative;
-  display: block;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
   margin-left: 10px;
   margin-bottom: 10px;
   background-image: url('/wp-content/themes/jennybphoto/assets/images/svg/flower.svg');
@@ -8,11 +10,12 @@
   background-position: 50% -20%;
   background-repeat: no-repeat;
   border-top: 0;
-  padding: 2em 1em 0.5em;
+  padding: 2em 4em 1em;
   text-transform: uppercase;
   font-size: 0.8em;
   letter-spacing: 0.1em;
   color: $black;
+  z-index: 1;
 
   &::after {
     content: '';
@@ -23,6 +26,52 @@
     height: 80%;
     width: 100%;
     border: 1px solid black;
+    transition: 0.15s ease-in-out;
+    z-index: -5;
+  }
 
+  &:hover {
+    color: $white;
+
+    &::after {
+      background-color: $black;
+    }
+  }
+} */
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 1.5em 4em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  border: 1px solid $gray;
+  color: $gray;
+  transition: 0.15s ease-in-out;
+  font-weight: 100;
+  z-index: 0;
+
+  &:hover {
+    background-color: $gray;
+    color: $white;
+
+    &::after {
+      border: 1px solid $white;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95, 0.82);
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 1px solid $gray;
+    transition: 0.15s ease-in-out;
+    z-index: -1;
   }
 }
