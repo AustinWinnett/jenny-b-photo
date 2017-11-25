@@ -1,0 +1,42 @@
+.jbp-social-links {
+  margin: 8em auto;
+
+  .jbp-social-links__inner {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .jbp-social-links__links {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 1em;
+      height: 3em;
+      width: 3em;
+      border-radius: 50%;
+      background-color: $brand-primary;
+      transition: 0.15s ease-in-out;
+
+      &:hover {
+        background-color: darken($brand-primary, 10%);
+      }
+
+      a {
+        height: 2em;
+        display: block;
+        border-radius: 50%;
+        vertical-align: middle;
+        color: $white;
+        font-size: 1.5em;
+      }
+
+      svg {
+        vertical-align: -30%;
+      }
+    }
+  }
+}

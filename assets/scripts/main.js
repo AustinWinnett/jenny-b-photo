@@ -33,6 +33,18 @@
           mainClass: 'mfp-fade'
         });
 
+        $('.jbp-masonry-grid__grid').magnificPopup({
+          type: 'image',
+          removalDelay: 300,
+          delegate: 'a',
+          mainClass: 'mfp-fade',
+          gallery: {
+      			enabled: true,
+      			navigateByImgClick: true,
+      			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      		},
+        });
+
 
         // Banner
         $('.jbp-banner__slides').slick({

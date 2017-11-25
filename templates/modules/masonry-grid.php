@@ -16,9 +16,9 @@
 
       <?php foreach ( $data['images'] as $key => $image ) : ?>
 
-        <a href="<?php echo $image; ?>" class="jbp-masonry-grid__image" rel="magnific">
+        <a href="<?php echo $image; ?>" class="jbp-masonry-grid__image">
           <img src="<?php echo $image; ?>" alt="">
-        </a>
+        </a> <!-- /.jbp-masonry-grid__image -->
 
       <?php endforeach; ?>
 

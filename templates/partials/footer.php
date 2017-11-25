@@ -1,7 +1,9 @@
 <footer class="footer">
   <div class="footer__top">
     <div class="container">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/BlushLogo.png'; ?>" alt="" class="logo logo--footer">
+      <a href="<?php echo site_url(); ?>" class="footer__logo">
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/BlushLogo.png'; ?>" alt="" class="logo logo--footer">
+      </a>
 
       <nav class="footer-nav">
         <?php

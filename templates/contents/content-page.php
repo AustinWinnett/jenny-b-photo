@@ -118,3 +118,12 @@
     'content'    => '<h4 class="title-heading">This is our team.</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit perferendis tempore veritatis explicabo ducimus dolore, vitae fugit. Officia, suscipit explicabo provident quidem voluptates, consectetur. Ipsum quis incidunt iure voluptatibus quisquam quibusdam eius, animi sit voluptates. Doloremque, ducimus, ipsum. Incidunt officiis aspernatur architecto mollitia ipsam libero iure ea neque distinctio ratione?</p>'
   )
 ) ?>
+
+<?php dd_include_module(
+  'social-links',
+  array(
+    'facebook'     => '#facebook',
+    'instagram'    => '#instagram',
+    'twitter'      => '#twitter'
+  )
+) ?>
