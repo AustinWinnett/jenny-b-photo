@@ -1,15 +1,23 @@
 
 
 <?php while (have_posts()) : the_post(); ?>
-  <?php dd_include_module(
-    'banner',
-    array(
-      'images'  => array(
-        '0'      => 'https://unsplash.it/1920/1286',
-      ),
-      'title'    => get_the_title()
-    )
-  ) ?>
+  <?php if ( get_post_thumbnail_id() ) : ?>
+    <?php dd_include_module(
+      'banner',
+      array(
+        'images'  => array(
+          '0'      => wp_get_attachment_image_url(get_post_thumbnail_id(), 'full')
+        ),
+        'title'    => get_the_title()
+      )
+    ) ?>
+  <?php else : ?>
+    <div class="post__header">
+      <div class="container container--sm">
+        <h1 class="display-heading"><?php the_title(); ?></h1>
+      </div>
+    </div>
+  <?php endif; ?>
 
   <article <?php post_class(); ?>>
     <div class="container container--sm">
@@ -26,3 +34,39 @@
     </div>
   </article>
 <?php endwhile; ?>
+
+<div class="post__nav">
+  <?php if ( get_previous_post() ) : ?>
+    <?php
+      $image = wp_get_attachment_image_url( get_post_thumbnail_id( get_previous_post()->ID ), 'medium' );
+    ?>
+    <div class="post__nav-link post__prev-post">
+
+      <a href="<?php echo get_permalink(get_previous_post()->ID); ?>" class="overlay-link"></a>
+
+      <div class="post__nav-img" style="background-image: url(<?php echo $image; ?>)">
+
+      </div>
+
+      <p class="post__nav-title"><?php echo get_previous_post()->post_title; ?></p>
+
+    </div>
+  <?php endif; ?>
+
+  <?php if ( get_next_post() ) : ?>
+    <?php
+      $image = wp_get_attachment_image_url( get_post_thumbnail_id( get_next_post()->ID ), 'medium' );
+    ?>
+    <div class="post__nav-link post__next-post">
+
+      <a href="<?php echo get_permalink(get_next_post()->ID); ?>" class="overlay-link"></a>
+
+      <div class="post__nav-img" style="background-image: url(<?php echo $image; ?>)">
+
+      </div>
+
+      <p class="post__nav-title"><?php echo get_next_post()->post_title; ?></p>
+
+    </div>
+  <?php endif; ?>
+</div>

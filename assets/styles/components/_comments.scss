@@ -1,0 +1,142 @@
+.comments {
+  margin-top: 2em;
+  border-top: 1px solid $gray;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: $gray;
+    margin-top: 0.25em;
+  }
+}
+
+.comment-list {
+  margin: 2em 0 0 ;
+  padding: 0;
+}
+
+.comment {
+  list-style: none;
+  border: 1px solid $gray;
+  margin-bottom: 2em;
+
+  .comment-content {
+    padding: 0 1em;
+  }
+
+  .comment-metadata {
+    padding: 1em 1em 0;
+  }
+
+  .reply {
+    padding: 0 1em 1em;
+
+    a {
+      @extend .btn;
+      margin-top: 1em;
+    }
+  }
+
+  .comment-awaiting-moderation {
+    padding: 0 1em;
+  }
+
+  .children {
+    padding: 2em;
+  }
+
+  .comment-respond {
+    padding: 1em 2em 2em;
+
+    .comment-reply-title {
+      padding-top: 2em;
+      border-top: 1px solid $gray;
+    }
+  }
+}
+
+
+
+.comment-author {
+  position: relative;
+  /* background-color: $gray; */
+  color: $dark-gray;
+  padding: 1em;
+  font-weight: 300;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 1px;
+    width: calc( 100% - 2em );
+    background-color: $gray;
+  }
+
+  b {
+    font-weight: 300;
+  }
+
+  a {
+    color: $dark-gray;
+  }
+
+  img,
+  b,
+  .says {
+    vertical-align: middle;
+  }
+
+  img {
+    margin-right: 1em;
+  }
+}
+
+/*
+ * Form
+ */
+
+.comments > .comment-respond {
+
+  .comment-reply-title {
+    @extend .display-heading;
+    border-bottom: 1px solid $gray;
+  }
+}
+
+.comment-respond {
+  label {
+    @extend .title-heading;
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  textarea {
+    border: 1px solid $gray;
+    padding: 1em;
+  }
+
+  input[type="submit"] {
+    border: 1px solid $gray;
+    border-radius: 0;
+    padding: 1em;
+    appearance: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: 0.15s ease-in-out;
+    font-family: 'Lato', sans-serif;
+
+    &:hover {
+      background-color: $gray;
+      color: $white;
+    }
+  }
+}
