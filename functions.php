@@ -15,6 +15,7 @@ $sage_includes = [
   'lib/setup.php',     // Theme setup
   'lib/titles.php',    // Page titles
   'lib/wrapper.php',   // Theme wrapper class
+  'lib/cpt/main.php',               // Custom post type module
   'lib/customizer.php' // Theme customizer
 ];
 
