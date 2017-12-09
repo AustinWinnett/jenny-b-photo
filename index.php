@@ -1,10 +1,17 @@
+<?php
+  if ( is_post_type_archive('post') ) {
+    $title = 'blog';
+  } elseif ( is_post_type_archive('resource') ) {
+    $title = 'for photographers';
+  }
+?>
 <?php dd_include_module(
   'banner',
   array(
     'images'  => array(
       '0'      => 'https://unsplash.it/1920/1285',
     ),
-    'title'    => 'blog'
+    'title'    => $title
   )
 ) ?>
 

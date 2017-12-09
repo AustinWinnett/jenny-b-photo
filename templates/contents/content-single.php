@@ -35,38 +35,50 @@
   </article>
 <?php endwhile; ?>
 
-<div class="post__nav">
-  <?php if ( get_previous_post() ) : ?>
-    <?php
-      $image = wp_get_attachment_image_url( get_post_thumbnail_id( get_previous_post()->ID ), 'medium' );
-    ?>
-    <div class="post__nav-link post__prev-post">
+<?php if ( get_previous_post() || get_next_post() ) : ?>
+  
+  <div class="post__nav">
 
-      <a href="<?php echo get_permalink(get_previous_post()->ID); ?>" class="overlay-link"></a>
+    <?php if ( get_previous_post() ) : ?>
 
-      <div class="post__nav-img" style="background-image: url(<?php echo $image; ?>)">
+      <?php
+        $image = wp_get_attachment_image_url( get_post_thumbnail_id( get_previous_post()->ID ), 'medium' );
+      ?>
 
-      </div>
+      <div class="post__nav-link post__prev-post">
 
-      <p class="post__nav-title"><?php echo get_previous_post()->post_title; ?></p>
+        <a href="<?php echo get_permalink(get_previous_post()->ID); ?>" class="overlay-link"></a>
 
-    </div>
-  <?php endif; ?>
+        <div class="post__nav-img" style="background-image: url(<?php echo $image; ?>)">
 
-  <?php if ( get_next_post() ) : ?>
-    <?php
-      $image = wp_get_attachment_image_url( get_post_thumbnail_id( get_next_post()->ID ), 'medium' );
-    ?>
-    <div class="post__nav-link post__next-post">
+        </div> <!-- /.post__nav-img -->
 
-      <a href="<?php echo get_permalink(get_next_post()->ID); ?>" class="overlay-link"></a>
+        <p class="post__nav-title"><?php echo get_previous_post()->post_title; ?></p>
 
-      <div class="post__nav-img" style="background-image: url(<?php echo $image; ?>)">
+      </div> <!-- /.post__nav-link -->
 
-      </div>
+    <?php endif; ?>
 
-      <p class="post__nav-title"><?php echo get_next_post()->post_title; ?></p>
+    <?php if ( get_next_post() ) : ?>
 
-    </div>
-  <?php endif; ?>
-</div>
+      <?php
+        $image = wp_get_attachment_image_url( get_post_thumbnail_id( get_next_post()->ID ), 'medium' );
+      ?>
+
+      <div class="post__nav-link post__next-post">
+
+        <a href="<?php echo get_permalink(get_next_post()->ID); ?>" class="overlay-link"></a>
+
+        <div class="post__nav-img" style="background-image: url(<?php echo $image; ?>)">
+
+        </div> <!-- /.post__nav-img -->
+
+        <p class="post__nav-title"><?php echo get_next_post()->post_title; ?></p>
+
+      </div> <!-- /.post__nav-link -->
+
+    <?php endif; ?>
+
+  </div> <!-- /.post__nav -->
+
+<?php endif; ?>
