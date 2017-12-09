@@ -26,6 +26,22 @@
   </div>
 </div>
 
+<div class="jbp-flexible-content">
+  <div class="row-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-full" style="text-align: center;">
+          <h1 class="title-heading">Photography in Kansas City</h1>
+          <h2 class="display-heading">Title Goes Here</h2>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam neque maxime dolore, veniam voluptas quae labore iure reprehenderit, dolor. Earum, cupiditate expedita nulla amet! Ut alias, cupiditate doloremque expedita quas maiores! Quia, ratione, consectetur. Inventore veritatis voluptates libero nemo accusantium modi nostrum, sunt et corporis ipsam unde porro debitis laboriosam?</p>
+          <?php echo do_shortcode('[ninja_form id=1]') ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php dd_include_module(
   'image-links',
   array(
