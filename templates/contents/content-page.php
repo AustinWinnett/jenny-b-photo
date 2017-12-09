@@ -19,6 +19,7 @@
           <h2 class="display-heading">Title Goes Here</h2>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam neque maxime dolore, veniam voluptas quae labore iure reprehenderit, dolor. Earum, cupiditate expedita nulla amet! Ut alias, cupiditate doloremque expedita quas maiores! Quia, ratione, consectetur. Inventore veritatis voluptates libero nemo accusantium modi nostrum, sunt et corporis ipsam unde porro debitis laboriosam?</p>
+          <iframe src="https://player.vimeo.com/video/6370469" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -109,11 +110,7 @@
         'content'       => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, ratione optio quod magni at tempore cumque recusandae corrupti commodi cupiditate.</p>',
         'name'       => 'Jenny Borel'
       ),
-      '2'      => array(
-        'image'      => 'https://unsplash.it/1920/1282',
-        'content'       => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error nobis vero voluptatem, ipsum dolores soluta repudiandae. Sequi, delectus alias accusantium!</p>',
-        'name'       => 'Andrew Staudenmaier'
-      ),
+
     ),
     'content'    => '<h4 class="title-heading">This is our team.</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit perferendis tempore veritatis explicabo ducimus dolore, vitae fugit. Officia, suscipit explicabo provident quidem voluptates, consectetur. Ipsum quis incidunt iure voluptatibus quisquam quibusdam eius, animi sit voluptates. Doloremque, ducimus, ipsum. Incidunt officiis aspernatur architecto mollitia ipsam libero iure ea neque distinctio ratione?</p>'
   )
