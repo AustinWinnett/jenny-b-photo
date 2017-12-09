@@ -42,6 +42,10 @@
       background-color: rgba( $black, 0 );
       transition: 0.25s ease-in-out;
       z-index: -1;
+
+      @include screen-md {
+        background-color: rgba( $black, 0.5 );
+      }
     }
 
     &::after {
