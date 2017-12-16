@@ -1,6 +1,6 @@
 
-@import "common/typography";
 @import "common/variables";
+@import "common/typography";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
@@ -33,6 +33,7 @@
 @import "modules/alt-content";
 @import "modules/banner";
 @import "modules/flexible-content";
+@import "modules/instagram";
 @import "modules/image-links";
 @import "modules/masonry-grid";
 @import "modules/social-links";

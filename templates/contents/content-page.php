@@ -165,3 +165,14 @@
     'twitter'      => '#twitter'
   )
 ) ?>
+
+<?php dd_include_module(
+  'instagram',
+  array(
+    'title'         => '<h4 class="display-heading">Follow us</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ipsum iure odio magnam mollitia optio impedit culpa, accusamus reprehenderit rerum, tenetur temporibus ullam! Dignissimos, voluptatem.</p>',
+    'user_id'       => '308884031',
+    'client_id'     => 'deb9cb5d31b6433f8bb3c607fc72666f',
+    'access_token'  => '308884031.1677ed0.3da2c406cf634a2faa5ccfe9ee7f9cc3',
+    'username'      => '@lyss413',
+  )
+) ?>

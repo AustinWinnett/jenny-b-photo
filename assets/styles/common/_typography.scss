@@ -92,4 +92,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin: 0.25em 0;
 	font-size: 4em;
 	text-transform: lowercase;
+
+	@include screen-sm {
+		font-size: 3em;
+	}
+
+	@include screen-xs {
+		font-size: 2.5em;
+	}
 }

@@ -20,6 +20,21 @@
       init: function() {
         // JavaScript to be fired on all pages
 
+        var navScrolled = false;
+
+        $(window).scroll(function (event) {
+          if ( !$('.navbar').hasClass('navbar--open') ) {
+            var scroll = $(window).scrollTop();
+            if ( scroll > 10 && !navScrolled ) {
+              $('.navbar').addClass('navbar--scrolled');
+              navScrolled = true;
+            } else if ( scroll < 10 && navScrolled ) {
+              $('.navbar').removeClass('navbar--scrolled');
+              navScrolled = false;
+            }
+          }
+        });
+
         $('.navbar-toggle').click(function() {
           $('header nav').fadeToggle();
           $(this).toggleClass('open');
@@ -55,6 +70,30 @@
           fade: true
 
         });
+
+        if ( $('.jbp-instagram').length > 0 ) {
+          var userId = $( '.jbp-instagram #user_id' ).data( 'value' );
+          console.log(userId);
+          var clientId = $( '.jbp-instagram #client_id' ).data( 'value' );
+          var accessToken = $( '.jbp-instagram #access_token' ).data( 'value' );
+          var instagramUrl = $( '.jbp-instagram #instagram_url' ).data( 'value' );
+          var instagramUsername = $( '.jbp-instagram #instagram_username' ).data( 'value' );
+
+
+          feed = new Instafeed({
+            get: 'user',
+            userId: userId,
+            clientId: clientId,
+            accessToken: accessToken,
+            resolution: 'standard_resolution',
+            template: '<div class="instagram__item" style="background-image: url(\'{{image}}\');"><a href="' + instagramUrl + '" class="overlay-link sub-heading text-white" target="_blank"><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg><p>' + instagramUsername + '</p></a></div>',
+            limit: 8
+          });
+
+          feed.run();
+        }
+
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

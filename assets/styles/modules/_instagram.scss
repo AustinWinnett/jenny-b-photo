@@ -1,0 +1,137 @@
+.jbp-instagram {
+  position: relative;
+  background-color: $white;
+  margin: 8em 0;
+  z-index: 0;
+  overflow: hidden;
+
+  @include screen-sm {
+    .container {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .instagram__content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba( $black, 0.75);
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+
+      svg {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3em;
+
+        @include screen-md {
+          font-size: 2em;
+        }
+
+        @include screen-sm {
+          font-size: 2em;
+        }
+      }
+
+      p {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        letter-spacing: normal;
+        width: 100%;
+        font-size: 0.9em;
+        text-align: center;
+        text-transform: lowercase;
+
+        @include screen-md {
+          font-size: 0.75em;
+        }
+
+        @include screen-sm {
+          font-size: 1.25em;
+        }
+
+        @include screen-xs {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+.instagram__wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 3em;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.instagram__item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 25%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 0;
+  margin: 0;
+  transition: all 0.15s ease-in-out;
+
+  @include screen-md {
+    margin-top: 1.75px;
+  }
+
+  &:hover {
+
+    .overlay-link {
+      opacity: 1;
+      transition: all 0.15s ease-in-out;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  @include screen-sm {
+    position: static;
+    width: calc(50% - 0.5px);
+
+
+    &:hover {
+      .overlay-link {
+        opacity: 0;
+      }
+    }
+
+    &:nth-of-type(1) {
+      .overlay-link {
+        opacity: 1;
+      }
+    }
+
+    &:nth-of-type(1n+5) {
+      display: none;
+    }
+  }
+}

@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "magnific-popup": "~1.0.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "instafeed.js": "^1.4.1"
   }
 }
