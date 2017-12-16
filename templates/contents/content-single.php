@@ -6,7 +6,9 @@
       'banner',
       array(
         'images'  => array(
-          '0'      => wp_get_attachment_image_url(get_post_thumbnail_id(), 'full')
+          '0'      => array(
+            'url'  => wp_get_attachment_image_url(get_post_thumbnail_id(), 'full')
+          )
         ),
         'title'    => get_the_title()
       )
@@ -36,7 +38,7 @@
 <?php endwhile; ?>
 
 <?php if ( get_previous_post() || get_next_post() ) : ?>
-  
+
   <div class="post__nav">
 
     <?php if ( get_previous_post() ) : ?>

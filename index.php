@@ -8,10 +8,8 @@
 <?php dd_include_module(
   'banner',
   array(
-    'images'  => array(
-      '0'      => 'https://unsplash.it/1920/1285',
-    ),
-    'title'    => $title
+    'images'  => get_field('banner_images', get_option('page_for_posts')),
+    'title'    => get_field('banner_title', get_option('page_for_posts')),
   )
 ) ?>
 

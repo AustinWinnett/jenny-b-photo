@@ -41,3 +41,20 @@ function custom_excerpt_length( $length ) {
     return 15;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+/**
+ * Runs get_template_part but returns the content rather than outputting it, so that
+ * it can be saved as a variable.
+ * @param  string $slug first part of the file path
+ * @param  string $name last part of the file path
+ * @return string  html output of the requested template part
+ */
+function return_get_template_part($slug, $name=null) {
+
+   ob_start();
+   get_template_part($slug, $name);
+   $content = ob_get_contents();
+   ob_end_clean();
+
+   return $content;
+}
