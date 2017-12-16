@@ -2,36 +2,37 @@
   'banner',
   array(
     'images'  => array(
-      '0'      => wp_get_attachment_image_url( get_post_thumbnail_id(), 'Full' ),
+      '0'      => array(
+        'url'  => wp_get_attachment_image_url( get_post_thumbnail_id(), 'Full' )
+      ),
     ),
     'title'    => get_the_title()
   )
 ) ?>
 
-<?php if ( get_current_user_id() === 3 ) {
-  echo 'You are the right user!';
-} else {
-  echo 'Who are you?';
-} ?>
+<?php if ( wp_get_current_user()->ID === get_field('client_id')['ID'] || current_user_can('editor') || current_user_can('administrator') ) : ?>
+  <?php dd_include_module(
+    'masonry-grid',
+    array(
+      'images'  => get_field('client_gallery_images'),
+      'button_text'    => 'Download',
+      'button_link'    => get_field('client_download_link')
+    )
+  ) ?>
+<?php else : ?>
 
-<?php dd_include_module(
-  'masonry-grid',
-  array(
-    'images'  => array(
-      '0'      => 'https://unsplash.it/1920/1280',
-      '1'      => 'https://unsplash.it/1420/1280',
-      '2'      => 'https://unsplash.it/1920/1280',
-      '3'      => 'https://unsplash.it/1920/800',
-      '4'      => 'https://unsplash.it/1920/1280',
-      '5'      => 'https://unsplash.it/1000/1280',
-      '6'      => 'https://unsplash.it/1920/1280',
-      '7'      => 'https://unsplash.it/1420/1280',
-      '8'      => 'https://unsplash.it/1920/1280',
-      '9'      => 'https://unsplash.it/1920/800',
-      '10'      => 'https://unsplash.it/1920/1280',
-      '11'      => 'https://unsplash.it/1000/1280',
-    ),
-    'button_text'    => 'Download',
-    'button_link'    => '#'
-  )
-) ?>
+  <div class="jbp-flexible-content">
+    <div class="row-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-full" style="text-align: center;">
+            <h2 class="title-heading">Content Restricted</h2>
+            <p>This page is restricted for a certain user.</p>
+            <?php wp_login_form(); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<?php endif; ?>
