@@ -1,9 +1,21 @@
 .jbp-team-grid {
-  margin: 8em 0;
+  margin: 8em 0 6em;
   overflow: hidden;
 
   .jbp-team-grid__box {
     overflow: hidden;
+  }
+
+  .jbp-team-grid__content {
+    position: relative;
+    padding: 2em;
+    text-align: center;
+    z-index: 0;
+
+    .jbp-team-grid__content-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
   }
 
   .jbp-team-grid__team {
@@ -12,8 +24,6 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: $brand-primary;
-    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.75);
     z-index: 1;
   }
 
@@ -21,7 +31,8 @@
     position: relative;
     flex: 0 0 auto;
     width: calc( 100% / 3 );
-    margin: 0 auto;
+    padding: 0 2em;
+    margin: 0 auto 2em;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -29,60 +40,36 @@
     z-index: 0;
 
     @include screen-md {
+      width: calc( 100% / 2 );
+    }
+
+    @include screen-sm {
       width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background-color: rgba( $black, 0 );
-      transition: 0.25s ease-in-out;
-      z-index: -1;
+    .jbp-team-grid__member-image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
 
-      @include screen-md {
-        background-color: rgba( $black, 0.5 );
-      }
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      padding-top: 150%;
-
-      @include screen-md {
-        display: none;
+      &::after {
+        content: '';
+        display: block;
+        padding-top: 150%;
       }
     }
 
     .jbp-team-grid__member-content {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, 0);
       padding: 1em 2em;
       width: 100%;
       text-align: center;
-      color: $white;
       transition: 0.25s ease-in-out;
 
-      @include screen-md {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: inherit;
-        padding: 3em 2em;
-      }
-
       @include screen-sm {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: inherit;
-        padding: 3em 1em;
+
+        padding: 1em 1em 3em;
       }
 
       .display-heading {
@@ -100,49 +87,6 @@
           font-size: 2.5em;
         }
       }
-
-      .jbp-team-grid__member-content__desc {
-        opacity: 0;
-        transition: 0.25s ease-in-out;
-
-        @include screen-md {
-          opacity: 1;
-        }
-      }
-    }
-
-    &:hover {
-
-      &::before {
-        background-color: rgba( $black, 0.5 );
-      }
-
-      .jbp-team-grid__member-content {
-        top: 50%;
-        transform: translate(-50%, -50%);
-
-        @include screen-md {
-          transform: inherit;
-        }
-
-      }
-      .jbp-team-grid__member-content__desc {
-        opacity: 1;
-      }
-    }
-  }
-
-  .jbp-team-grid__content {
-    position: relative;
-    background-color: $dark-gray;
-    color: $white;
-    padding: 4em 2em;
-    text-align: center;
-    z-index: 0;
-
-    .jbp-team-grid__content-inner {
-      max-width: 700px;
-      margin: 0 auto;
     }
   }
 }

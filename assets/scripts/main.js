@@ -40,6 +40,41 @@
           $(this).toggleClass('open');
         });
 
+        //Basic Collapse toggle for dropdowns and toggle menus
+        $('.navbar .menu-item-has-children').on('click', function(e) {
+          e.preventDefault();
+          //if target element is not open already
+          //find all open collapse elements and close them
+          if ( !$(this).is('.collapsed') ) {
+            if ( $('.collapsed.menu-item-has-children').length > 0 ) {
+              $('.collapsed.menu-item-has-children').each(function(){
+                $(this).trigger('click');
+              });
+            }
+          }
+          var target = $(this).find('.sub-menu');
+          $(this).toggleClass('collapsed');
+          $(target).toggleClass('collapsed');
+          $(target).slideToggle();
+        });
+
+        $(document).click(function(e) {
+          //close all [data-toggle="collapse"] elements if
+          //target doesn't have any data attributes defined or
+          //if the target is does not have a data-toggle and
+          //it does not have a data-content and
+          //then make sure that the target is not a child of data-content="collapse"
+          if (
+            ( $(e.target).data('toggle') === undefined || $(e.target).data('toggle') === false ) &&
+            ( $(e.target).data('content') === undefined || $(e.target).data('content') ===  false ) &&
+            !$(e.target).parents( '.menu-item-has-children' ).length
+            ) {
+            $('.collapsed.menu-item-has-children').each(function(e){
+              $(this).trigger('click');
+            });
+        }
+      });
+
         // Magnific Popup
         // For embeded images within the post content
         $('a[rel="magnific"]').magnificPopup({

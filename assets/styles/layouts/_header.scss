@@ -92,7 +92,8 @@
     text-transform: uppercase;
     letter-spacing: 0.2em;
 
-    li {
+    > li {
+      position: relative;
       flex: 0 0 auto;
       display: inline-block;
       list-style: none;
@@ -104,7 +105,7 @@
       }
     }
 
-    a {
+    > li > a {
       position: relative;
       color: $black;
 
@@ -126,6 +127,36 @@
         &::after {
           opacity: 1;
           transform: translateX(-50%) translateY( 0 );
+        }
+      }
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    margin-top: 1em;
+    padding: 3em 0 0 1em;
+    border-left: 1px solid $dark-gray;
+    width: 150px;
+
+    @include screen-md {
+      position: relative;
+      margin-left: auto;
+      padding: 0.5em 1em 0.5em 0;
+      border-left: none;
+      border-right: 1px solid $dark-gray;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 0.5em;
+
+      a {
+        color: $dark-gray;
+
+        &:hover {
+          letter-spacing: 0.8em;
         }
       }
     }

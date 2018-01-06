@@ -2,13 +2,25 @@
 
   <div class="container">
 
+    <div class="jbp-team-grid__content">
+
+      <div class="jbp-team-grid__content-inner">
+
+        <?php echo $data['content']; ?>
+
+      </div> <!-- /.jbp-team-grid__content-inner -->
+
+    </div> <!--/.jbp-team-grid__content -->
+
     <div class="jbp-team-grid__box">
 
       <div class="jbp-team-grid__team">
 
         <?php foreach ( $data['members'] as $key => $member ) : ?>
 
-          <div class="jbp-team-grid__member" style="background-image: url(<?php echo $member['image']; ?>)">
+          <div class="jbp-team-grid__member">
+
+            <div class="jbp-team-grid__member-image" style="background-image: url(<?php echo $member['image']; ?>)"></div>
 
             <div class="jbp-team-grid__member-content">
 
@@ -27,16 +39,6 @@
         <?php endforeach; ?>
 
       </div> <!-- /.jbp-team-grid__team -->
-
-      <div class="jbp-team-grid__content">
-
-        <div class="jbp-team-grid__content-inner">
-
-          <?php echo $data['content']; ?>
-
-        </div> <!-- /.jbp-team-grid__content-inner -->
-
-      </div> <!--/.jbp-team-grid__content -->
 
     </div> <!--/.jbp-team-grid__box -->
 

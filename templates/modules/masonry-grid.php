@@ -24,7 +24,7 @@
 
     </div> <!--/.jbp-masonry-grid__grid -->
 
-    <?php if( $data['button_text'] ) : ?>
+    <?php if( $data['button_text'] && $data['button_link'] ) : ?>
 
       <div class="jbp-masonry-grid__more">
 

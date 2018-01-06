@@ -1,18 +1,77 @@
 .clients__page {
   .clients__grid {
-    column-count: 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 0 -0.5em;
+
+    @include screen-lg {
+      /* column-count: 3; */
+    }
+
+    @include screen-sm {
+      /* column-count: 2; */
+    }
+
+    @include screen-xs {
+      margin: 0;
+    }
 
     .clients__client {
+      flex: 0 0 auto;
       position: relative;
       display: inline-block;
-      width: 100%;
-      margin-bottom: 1em;
-      padding-top: 80%;
+      width: calc(25% - 1em);
+      margin: 0 0.5em 1em;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
       overflow: hidden;
       z-index: 0;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        padding: 0.5em 1em;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: 0.25s ease-in-out;
+      }
+
+      @include screen-lg {
+        width: calc(33.3% - 1em);
+      }
+
+      @include screen-sm {
+        width: calc(50% - 1em);
+
+        &::after {
+          background-color: rgba( $black, 0.5 );
+        }
+
+        span {
+          opacity: 1;
+          transform: translateY(-50%);
+          color: $white;
+          font-weight: 300;
+        }
+      }
+
+      @include screen-xs {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 1em;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 80%;
+      }
 
       &::after {
         content: '';
@@ -25,25 +84,7 @@
         z-index: -1;
       }
 
-      &:nth-child(3n+1) {
-        padding-top: 50%;
-      }
 
-      &:nth-child(2n+2) {
-        padding-top: 65%;
-      }
-
-      span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 0.5em;
-        text-align: center;
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: 0.25s ease-in-out;
-      }
 
       &:hover {
         &::after {
@@ -52,9 +93,20 @@
 
         span {
           opacity: 1;
-          transform: translateY(0);
+          transform: translateY(-50%);
           color: $white;
           font-weight: 300;
+        }
+      }
+
+      &.clients__client--no-image {
+        background-color: $brand-primary;
+
+        span {
+          top: 50%;
+          left: 50%;
+          opacity: 1;
+          transform: translate(-50%, -50%);
         }
       }
     }
