@@ -9,9 +9,28 @@
   input[type="text"],
   input[type="email"],
   input[type="tel"],
+  select,
   textarea {
     border: 1px solid $light-gray;
     padding: 1em;
+    background-color: white;
+    border-radius: 0;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  select {
+    appearance: none;
+    background-image: url('../images/svg/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: 99% center;
+  }
+
+    //hide default select arrow in IE
+  select::-ms-expand {
+    display: none;
   }
 
   input[type="button"] {
@@ -20,4 +39,12 @@
     cursor: hand;
     cursor: pointer;
   }
+
+  .nf-field-description,
+  .nf-form-fields-required {
+    padding-bottom: 1em;
+    color: $gray;
+    font-weight: 300;
+  }
+
 }
