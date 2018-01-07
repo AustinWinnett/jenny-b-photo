@@ -100,9 +100,9 @@ if( have_rows('flex_default') ):
           dd_include_module(
             'social-links',
             array(
-              'facebook'     => '#facebook',
-              'instagram'    => '#instagram',
-              'twitter'      => '#twitter'
+              'facebook'     => get_sub_field('facebook'),
+              'instagram'    => get_sub_field('instagram'),
+              'twitter'      => get_sub_field('twitter')
             )
           );
         ?>
@@ -114,10 +114,10 @@ if( have_rows('flex_default') ):
             'instagram',
             array(
               'title'         => get_sub_field('title'),
-              'user_id'       => '308884031',
-              'client_id'     => 'deb9cb5d31b6433f8bb3c607fc72666f',
-              'access_token'  => '308884031.1677ed0.3da2c406cf634a2faa5ccfe9ee7f9cc3',
-              'username'      => '@lyss413',
+              'user_id'       => get_sub_field('user_id'),
+              'client_id'     => get_sub_field('client_id'),
+              'access_token'  => get_sub_field('access_token'),
+              'username'      => get_sub_field('username')
             )
           );
         ?>
