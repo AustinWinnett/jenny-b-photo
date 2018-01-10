@@ -17,7 +17,7 @@
       <?php foreach ( $data['images'] as $key => $image ) : ?>
 
         <a href="<?php echo $image['url']; ?>" class="jbp-masonry-grid__image">
-          <?php echo wp_get_attachment_image( $image['id'], 'medium' ) ?>
+          <?php echo wp_get_attachment_image( $image['id'], 'medium_large' ) ?>
         </a> <!-- /.jbp-masonry-grid__image -->
 
       <?php endforeach; ?>

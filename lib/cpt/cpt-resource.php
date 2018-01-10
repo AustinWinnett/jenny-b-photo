@@ -50,3 +50,11 @@ if ( ! function_exists('register_resource_custom_post_type') ) {
 add_action( 'init', 'register_resource_custom_post_type', 0 );
 
 }
+
+if ( function_exists( 'acf_add_options_sub_page' ) ){
+ acf_add_options_sub_page(array(
+   'title'      => 'For Photographers Settings',
+   'parent'     => 'edit.php?post_type=resource',
+   'capability' => 'manage_options'
+ ));
+}

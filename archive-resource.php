@@ -1,15 +1,8 @@
-<?php
-  if ( is_post_type_archive('post') ) {
-    $title = 'blog';
-  } elseif ( is_post_type_archive('resource') ) {
-    $title = 'for photographers';
-  }
-?>
 <?php dd_include_module(
   'banner',
   array(
-    'images'  => get_field('banner_images', get_option('page_for_posts')),
-    'title'    => get_field('banner_title', get_option('page_for_posts')),
+    'images'  => get_field('banner_images', 'option'),
+    'title'    => get_field('banner_title', 'option'),
   )
 ) ?>
 
