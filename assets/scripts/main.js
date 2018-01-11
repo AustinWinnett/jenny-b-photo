@@ -83,6 +83,12 @@
           mainClass: 'mfp-fade'
         });
 
+        $('a[rel="magnific-video"]').magnificPopup({
+          type: 'iframe',
+          removalDelay: 300,
+          mainClass: 'mfp-fade'
+        });
+
         $('.jbp-masonry-grid__grid').magnificPopup({
           type: 'image',
           removalDelay: 300,
@@ -122,7 +128,7 @@
             accessToken: accessToken,
             resolution: 'standard_resolution',
             template: '<div class="instagram__item" style="background-image: url(\'{{image}}\');"><a href="' + instagramUrl + '" class="overlay-link sub-heading text-white" target="_blank"><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg><p>' + instagramUsername + '</p></a></div>',
-            limit: 8
+            limit: 6
           });
 
           feed.run();

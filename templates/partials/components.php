@@ -122,6 +122,18 @@ if( have_rows('flex_default') ):
           );
         ?>
 
+      <?php elseif( get_row_layout() == 'video_popups' ): ?>
+
+        <?php
+        dd_include_module(
+          'video-popups',
+          array(
+            'title'    => get_sub_field('title'),
+            'videos'   => get_sub_field('videos'),
+          )
+        );
+        ?>
+
       <?php endif;
 
     endwhile;
