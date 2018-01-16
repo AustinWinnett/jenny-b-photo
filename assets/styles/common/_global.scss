@@ -15,6 +15,11 @@ a {
   transition: all 0.15s ease-in-out;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .overlay-link {
   position: absolute;
   top: 0;
