@@ -1,8 +1,9 @@
 <?php
 
 $args = array(
-  'post_type'    => 'post',
-  'post_status'  => 'publish',
+  'post_type'        => 'post',
+  'post_status'      => 'publish',
+  'post__in'          => get_field('clients'),
   'posts_per_page'  => '-1',
   'orderby'          => 'date',
   'order'            => 'DESC',

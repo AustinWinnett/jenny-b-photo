@@ -48,3 +48,42 @@
   }
 
 }
+
+.search-form {
+  margin-bottom: 2em;
+
+  @include screen-sm {
+    max-width: 350px;
+    margin: 0 auto 2em;
+  }
+
+  label {
+    display: inline-block;
+    vertical-align: bottom;
+    width: calc(100% - 106px);
+  }
+
+  input[type="search"] {
+    border: 1px solid $light-gray;
+    padding: 1em;
+    background-color: white;
+    border-radius: 0;
+    vertical-align: bottom;
+    width: 100%;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  input[type="submit"] {
+    @extend .btn;
+    border-radius: 0;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 0.7em;
+    padding: 1em;
+    border: 1px solid $light-gray;
+    width: 100px;
+  }
+}

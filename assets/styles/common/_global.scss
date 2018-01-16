@@ -23,3 +23,13 @@ a {
   bottom: 0;
   z-index: 10;
 }
+
+.error-page {
+  padding: 11em 0;
+  text-align: center;
+
+  .search-form {
+    margin: 2em auto 0;
+    max-width: 400px;
+  }
+}

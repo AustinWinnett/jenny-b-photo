@@ -17,6 +17,8 @@
 
   <div class="container container--sm">
 
+    <?php echo get_search_form(); ?>
+
     <?php if (!have_posts()) : ?>
       <div style="text-align: center;">
         <p>Sorry, no results were found.</p>
